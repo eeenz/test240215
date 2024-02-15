@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery-fullpage-test</title>
+    <link rel="stylesheet" href="./styles/jquery.fullPage.css">
+    <style>
+        /* * {margin:0; padding: 0; box-sizing: border-box;}
+        .box {
+            width: 100%;
+            height: 100vh;
+            transition: all 0.3s;
+            position: relative; top:0;
+        }*/
+        .box * {
+            height: 100vh;
+        } 
+        .box .bg1 {background-color: lightskyblue;}
+        .box .bg1 .content1 {}
+        .box .bg1 .content2 {}
+        .box .bg2 {background-color: lightyellow;}
+        .box .bg3 {background-color: lightpink;}
+        .box .bg4 {background-color: lightsalmon;}
+        nav {
+            position: fixed; left: 50px; top: 50px; z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+    </nav>
+    <div class="box">
+        <div class="bg1 section">
+            <div class="title">
+                <a href="#a">제목1</a>
+                <a href="#b">제목2</a>
+            </div>
+            <div class="content">
+                <p>제이쿼리는 자바스크립트 라이브러리입니다.</p>
+                <p>제이쿼리는 DOM 이벤트와 스타일을 자바스크립트보다 쉽게 제작할 수 있습니다</p>
+            </div>
+        </div>
+        <div class="bg2 section"></div>
+        <div class="bg3 section"></div>
+        <div class="bg4 section"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script/jquery.fullPage.js"></script>
+    <script>
+        $('.box').fullpage({
+            scrollBar:true,
+            scrollingSpeed:1500,
+            navigation:true, 
+            showActiveTooltip:true,
+            // navigationTooltips:['제목1','제목2','제목3','제목4'],
+            // anchors:['a','b'],
+        })
+        const title = document.querySelectorAll('.tltle a')
+        const content = document.querySelectorAll('.content p')
+
+        // title.forEach((t,i)=>(
+        //     t.
+        // ))
+    </script>
+</body>
+</html>
